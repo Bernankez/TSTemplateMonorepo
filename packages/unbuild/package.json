@@ -1,0 +1,45 @@
+{
+  "name": "@ts-template/unbuild",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Cole <bernankez@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/bernankez/TSTemplateMonorepo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bernankez/TSTemplateMonorepo.git"
+  },
+  "bugs": "https://github.com/bernankez/TSTemplateMonorepo/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "start": "tsx src/index.ts"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "@ts-template/monorepo",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@7.12.0",
+  "description": "",
+  "author": {
+    "name": "Cole",
+    "email": "bernankez@qq.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bernankez/TSTemplateMonorepo.git"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "clean": "rimraf packages/*/{dist,es,lib}",
+    "build": "pnpm clean && pnpm -r -F \"./packages/*\" build",
+    "release": "bumpp package.json packages/**/package.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --fix",
+    "lint:check": "eslint .",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@bernankez/eslint-config": "^0.2.2",
+    "@types/node": "^18.11.18",
+    "bumpp": "^8.2.1",
+    "changelogithub": "^0.12.7",
+    "eslint": "^8.33.0",
+    "happy-dom": "^8.2.6",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.1",
+    "rimraf": "^3.0.2",
+    "tsup": "^6.6.2",
+    "tsx": "^3.12.3",
+    "typescript": "^4.9.5",
+    "unbuild": "^1.1.1",
+    "vite": "^4.1.1",
+    "vite-plugin-dts": "^1.7.2",
+    "vitest": "^0.28.4"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint --fix"
+    ]
+  }
+}
