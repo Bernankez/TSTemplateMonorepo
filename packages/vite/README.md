@@ -1,1 +1,1 @@
-# TSTemplateMonorepo/vite
+# TSTemplate(monorepo)/Vite
