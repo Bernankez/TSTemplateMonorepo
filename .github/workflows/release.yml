@@ -23,7 +23,7 @@ jobs:
           cache: pnpm
 
       - name: Install changelogithub
-        run: pnpm install changelogithub
+        run: pnpm install -w changelogithub
 
       - run: npx changelogithub
         env:
