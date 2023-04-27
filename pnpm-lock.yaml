@@ -14,8 +14,8 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0
       changelogithub:
-        specifier: 0.12.4
-        version: 0.12.4
+        specifier: ^0.12.9
+        version: 0.12.9
       eslint:
         specifier: ^8.39.0
         version: 8.39.0
@@ -69,8 +69,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.18
     dev: true
 
-  /@antfu/utils@0.5.2:
-    resolution: {integrity: sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==}
+  /@antfu/utils@0.7.2:
+    resolution: {integrity: sha512-vy9fM3pIxZmX07dL+VX1aZe7ynZ+YyB0jY+jE6r3hOK6GNY2t6W8rzpFC4tgpbXUYABkFQwgJq2XYXlxbXAI0g==}
     dev: true
 
   /@babel/code-frame@7.21.4:
@@ -1459,29 +1459,36 @@ packages:
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: true
 
-  /changelogen@0.1.1:
-    resolution: {integrity: sha512-LBbyAPmqpJ3sm/soYWZ+z8FDACaGB9eY8O2villawSxRDv83kve25Kje54FkiN6YrPiQaW2ehz9owKY+YzHTWw==}
+  /changelogen@0.4.0:
+    resolution: {integrity: sha512-GtNYojFz6sqXLesOqTG4G9rKGQ3ehyFnYuCBIUXlencCa6xVP/ZU4zOXS467/UoBm9robSJL+5YQzsbWGAxqcg==}
     hasBin: true
     dependencies:
       c12: 0.2.13
       consola: 2.15.3
+      convert-gitmoji: 0.1.3
       execa: 6.1.0
       mri: 1.2.0
-      scule: 0.2.1
+      node-fetch-native: 0.1.8
+      pkg-types: 0.3.6
+      scule: 0.3.2
+      semver: 7.5.0
     dev: true
 
-  /changelogithub@0.12.4:
-    resolution: {integrity: sha512-b7284jaQQw7Nxn5Q5UbTSBd5VJLJOlFmyYafAxtgp6fcnKcmK9xm+Li2gDQ49PTTnr4SKwX7Ei4gAnCRfr8GDg==}
+  /changelogithub@0.12.9:
+    resolution: {integrity: sha512-zZEdkrooyh4UlOMkjy6Boq0eq0MMmtXC2pr6lCBGUPXGuEZx6QqP5qe9zTBoe6z5E8jY0xNIzHWVaRQiwjgUcg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
-      '@antfu/utils': 0.5.2
-      c12: 0.2.13
+      '@antfu/utils': 0.7.2
+      c12: 1.4.1
       cac: 6.7.14
-      changelogen: 0.1.1
-      execa: 6.1.0
+      changelogen: 0.4.0
+      convert-gitmoji: 0.1.3
+      execa: 7.1.1
       kolorist: 1.8.0
       ohmyfetch: 0.4.21
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /character-entities-legacy@1.1.4:
@@ -1643,6 +1650,10 @@ packages:
 
   /consola@3.1.0:
     resolution: {integrity: sha512-rrrJE6rP0qzl/Srg+C9x/AE5Kxfux7reVm1Wh0wCjuXvih6DqZgqDZe8auTD28fzJ9TF0mHlSDrPpWlujQRo1Q==}
+    dev: true
+
+  /convert-gitmoji@0.1.3:
+    resolution: {integrity: sha512-t5yxPyI8h8KPvRwrS/sRrfIpT2gJbmBAY0TFokyUBy3PM44RuFRpZwHdACz+GTSPLRLo3s4qsscOMLjHiXBwzw==}
     dev: true
 
   /convert-source-map@1.9.0:
@@ -4054,8 +4065,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /scule@0.2.1:
-    resolution: {integrity: sha512-M9gnWtn3J0W+UhJOHmBxBTwv8mZCan5i1Himp60t6vvZcor0wr+IM0URKmIglsWJ7bRujNAVVN77fp+uZaWoKg==}
+  /scule@0.3.2:
+    resolution: {integrity: sha512-zIvPdjOH8fv8CgrPT5eqtxHQXmPNnV/vHJYffZhE43KZkvULvpCTvOt1HPlFaCZx287INL9qaqrZg34e8NgI4g==}
     dev: true
 
   /scule@1.0.0:
@@ -4624,7 +4635,7 @@ packages:
     dev: true
 
   /undici@5.22.0:
-    resolution: {integrity: sha512-f6pTQ9RF4DQtwoWSaC42P/NKlUjvezVvd9r155ohqkwFNRyBKM3f3pcty3ouusefNRyM25XhIQEbeQ46sZDJfQ==}
+    resolution: {integrity: sha512-f6pTQ9RF4DQtwoWSaC42P/NKlUjvezVvd9r155ohqkwFNRyBKM3f3pcty3ouusefNRyM25XhIQEbeQ46sZDJfQ==, tarball: https://registry.npmmirror.com/undici/-/undici-5.21.2.tgz}
     engines: {node: '>=12.18'}
     deprecated: '[WARNING] Use 5.21.2 instead of 5.22.0, reason: https://github.com/nodejs/undici/pull/2091'
     dependencies:

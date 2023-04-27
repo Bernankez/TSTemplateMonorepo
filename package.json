@@ -31,7 +31,7 @@
     "@bernankez/eslint-config": "^0.4.2",
     "@types/node": "^18.16.1",
     "bumpp": "^9.1.0",
-    "changelogithub": "0.12.4",
+    "changelogithub": "^0.12.9",
     "eslint": "^8.39.0",
     "happy-dom": "^9.9.2",
     "husky": "^8.0.3",
