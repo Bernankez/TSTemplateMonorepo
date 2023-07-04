@@ -1,19 +1,22 @@
 {
-  "name": "@ts-template/vite",
+  "name": "@package-name/vite",
   "type": "module",
   "version": "0.0.0",
+  "packageManager": "pnpm@8.6.6",
   "description": "",
   "author": {
-    "name": "Cole",
-    "email": "bernankez@qq.com"
+    "name": "author-name",
+    "email": "author-email",
+    "url": "author-homepage"
   },
   "license": "MIT",
-  "homepage": "https://github.com/bernankez/TSTemplateMonorepo#readme",
+  "homepage": "https://github.com/github-username/project-name/tree/master/packages/vite#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bernankez/TSTemplateMonorepo.git"
+    "url": "git+https://github.com/github-username/project-name.git",
+    "directory": "packages/vite"
   },
-  "bugs": "https://github.com/bernankez/TSTemplateMonorepo/issues",
+  "bugs": "https://github.com/github-username/project-name/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
@@ -38,8 +41,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && vite build",
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc --noEmit && vite build",
+    "start": "tsx src/index.ts"
   },
   "publishConfig": {
     "access": "public"

@@ -1,19 +1,22 @@
 {
-  "name": "@ts-template/tsup",
+  "name": "@package-name/tsup",
   "type": "module",
   "version": "0.0.0",
+  "packageManager": "pnpm@8.6.6",
   "description": "",
   "author": {
-    "name": "Cole",
-    "email": "bernankez@qq.com"
+    "name": "author-name",
+    "email": "author-email",
+    "url": "author-homepage"
   },
   "license": "MIT",
-  "homepage": "https://github.com/bernankez/TSTemplateMonorepo#readme",
+  "homepage": "https://github.com/github-username/project-name/tree/master/packages/tsup#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bernankez/TSTemplateMonorepo.git"
+    "url": "git+https://github.com/github-username/project-name.git",
+    "directory": "packages/tsup"
   },
-  "bugs": "https://github.com/bernankez/TSTemplateMonorepo/issues",
+  "bugs": "https://github.com/github-username/project-name/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
@@ -38,8 +41,10 @@
     "dist"
   ],
   "scripts": {
+    "dev": "tsup --watch src/index.ts",
     "build": "tsup",
-    "dev": "tsup --watch src/index.ts"
+    "start": "tsx src/index.ts",
+    "watch": "tsx watch src/index.ts"
   },
   "publishConfig": {
     "access": "public"

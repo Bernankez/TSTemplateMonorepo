@@ -13,14 +13,14 @@
       "ESNext",
       "DOM"
     ],
-    "skipLibCheck": true,
-    "noEmit": true
+    "skipLibCheck": true
   },
   "exclude": [
     "**/node_modules/**",
-    "**/es/**",
-    "**/lib/**",
     "**/dist/**",
     "playground"
+  ],
+  "references": [
+    { "path": "./packages/vite/tsconfig.json" }
   ]
 }

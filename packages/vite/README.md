@@ -1,1 +1,1 @@
-# TSTemplate(monorepo)/Vite
+# @project-name/Vite

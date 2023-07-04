@@ -15,6 +15,7 @@ lib
 **/volar.d.ts
 **/web-types.json
 *.local
+tsconfig.tsbuildinfo
 
 # Editor directories and files
 .vscode/*

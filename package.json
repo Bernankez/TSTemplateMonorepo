@@ -1,22 +1,23 @@
 {
-  "name": "@ts-template/monorepo",
+  "name": "@package-name/monorepo",
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@8.3.1",
+  "packageManager": "pnpm@8.6.6",
   "description": "",
   "author": {
-    "name": "Cole",
-    "email": "bernankez@qq.com"
+    "name": "author-name",
+    "email": "author-email"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bernankez/TSTemplateMonorepo.git"
+    "url": "git+https://github.com/github-username/project-name.git"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "clean": "rimraf packages/*/{dist,es,lib}",
+    "prepare": "husky install",
+    "clean": "rimraf --glob packages/*/{dist}",
     "build": "pnpm clean && pnpm -r -F \"./packages/*\" build",
     "release": "bumpp -r",
     "test": "vitest run",
@@ -24,26 +25,24 @@
     "coverage": "vitest run --coverage",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "format": "eslint . --fix",
-    "prepare": "husky install"
+    "fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@bernankez/eslint-config": "^0.4.2",
-    "@types/node": "^18.16.1",
-    "bumpp": "^9.1.0",
-    "changelogithub": "^0.12.9",
-    "eslint": "^8.39.0",
-    "happy-dom": "^9.9.2",
+    "@bernankez/eslint-config": "^0.7.0",
+    "@types/node": "^20.3.3",
+    "bumpp": "^9.1.1",
+    "eslint": "^8.44.0",
+    "happy-dom": "^9.20.3",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
-    "rimraf": "^3.0.2",
-    "tsup": "^6.7.0",
-    "tsx": "^3.12.6",
-    "typescript": "^5.0.4",
+    "lint-staged": "^13.2.3",
+    "rimraf": "^5.0.1",
+    "tsup": "^7.1.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6",
     "unbuild": "^1.2.1",
-    "vite": "^4.3.3",
-    "vite-plugin-dts": "^2.3.0",
-    "vitest": "^0.30.1"
+    "vite": "^4.3.9",
+    "vite-plugin-dts": "^3.0.3",
+    "vitest": "^0.32.4"
   },
   "lint-staged": {
     "*": [

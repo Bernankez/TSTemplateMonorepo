@@ -1,1 +1,1 @@
-# TSTemplate(monorepo)/tsup
+# @project-name/tsup

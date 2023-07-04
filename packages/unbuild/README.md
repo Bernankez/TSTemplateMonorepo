@@ -1,1 +1,1 @@
-# TSTemplate(monorepo)/unbuild
+# @project-name/unbuild
